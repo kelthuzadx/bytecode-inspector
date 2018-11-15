@@ -15,14 +15,16 @@
         <el-header>
             <el-card class="box-card">
                 <el-steps :active="active" finish-status="success">
-                    <el-step title="Step 1: Upload bytecode file"></el-step>
-                    <el-step title="Step 2: Decompiling it"></el-step>
+                    <el-step title="Upload bytecode file"></el-step>
+                    <el-step title="Decompiling"></el-step>
                 </el-steps>
             </el-card>
         </el-header>
         <el-main>
             <div class="step1" v-if="active==0">
                 <el-card class="box-card">
+                    <el-row  type="flex" class="row-bg" justify="space-around">
+                    <el-col :span="12">
                     <el-upload
                             name="classfile"
                             class="upload-demo"
@@ -31,8 +33,10 @@
                             :on-success="uploadSuccess"
                             multiple>
                         <i class="el-icon-upload"></i>
-                        <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
+                        <div class="el-upload__text">Drop file to page directly, or <em>upload it manually</em></div>
                     </el-upload>
+                    </el-col>
+                    </el-row>
                 </el-card>
             </div>
             <div class="step2" v-if="active>0">
