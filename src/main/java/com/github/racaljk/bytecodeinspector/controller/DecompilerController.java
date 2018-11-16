@@ -2,6 +2,7 @@ package com.github.racaljk.bytecodeinspector.controller;
 
 import b2j.B2Json;
 import b2j.OptionConst;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,6 +18,7 @@ import java.util.Map;
 public class DecompilerController {
     @ResponseBody
     @RequestMapping(value = "/decompiler",produces="application/json")
+    @Cacheable(value="decompileResultCache",key = "#file.getName()")
     public Map<String,String> decompiler(@RequestParam("classfile") MultipartFile file){
         byte[] bytes = null;
         try {
