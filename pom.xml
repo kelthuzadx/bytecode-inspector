@@ -5,8 +5,8 @@
 
     <groupId>com.github.racaljk</groupId>
     <artifactId>bytecode-inspector</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
 
     <name>bytecode-inspector</name>
     <description>Online java bytecode insepctor</description>
@@ -41,14 +41,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.github.racaljk/bc2json -->
         <dependency>
             <groupId>com.github.racaljk</groupId>
