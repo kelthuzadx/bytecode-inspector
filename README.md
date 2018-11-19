@@ -3,7 +3,7 @@ This is an online java bytecode inspector, it disassemble bytecode file and
 visualizes its content in different levels to satisfy various representing demands.
 
 # Build from source
-Actually, you can download prebuilt jar to run it direclty, for those who deeply relies on command line tool user, you can build by **maven** manually.
+Actually, you can download [**released jar**](https://github.com/racaljk/bytecode-inspector/releases) to run it direclty, for those who deeply relies on command line tool user, you can build by **maven** manually.
 ```bash
 $ git clone https://github.com/racaljk/bytecode-inspector.git
 $ cd bytecode-inspector
@@ -22,3 +22,6 @@ When it deployed successfully, you can access `http://localhost:8080/` via a web
 ![](screenshot/3.png)
 
 ![](screenshot/4.png)
+
+# License
+All code are licensed under the [MIT LICENSE](LICENSE).
